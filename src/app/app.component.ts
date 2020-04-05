@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor(private renderer: Renderer2) {}
 
   ngOnInit() {
-    this.startCamera();
+    // this.startCamera();
   }
 
   constraints = {
