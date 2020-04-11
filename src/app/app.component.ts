@@ -14,31 +14,8 @@ export class AppComponent implements OnInit {
   usdzUrl = "https://macmacoy.github.io/ar-messenger/assets/toy_drummer.usdz";
   openCameraButtonUrl = "https://macmacoy.github.io/ar-messenger/assets/OpenCameraButton.png";
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-    window.scrollTo(0, 0);
-  }
-
-  hideToolBar() {
-    if (!window.location.hash && window.addEventListener){
-      window.addEventListener("load", function() {
-          setTimeout(function(){
-              window.scrollTo(0, 0);
-          }, 0);
-      });
-      window.addEventListener( "orientationchange",function() {
-          setTimeout(function(){
-              window.scrollTo(0, 0);
-          }, 0);
-      });
-      window.addEventListener( "touchstart",function() {
-           setTimeout(function(){
-               window.scrollTo(0, 0);
-           }, 0);
-       });
-    }
-  }
+  ngOnInit() {}
 
 }
