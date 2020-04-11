@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OutOfRangeComponent implements OnInit {
 
-  outOfRangeLogoUrl = "https://macmacoy.github.io/ar-messenger/assets/treasure_map.png"
+  outOfRangeLogoUrl = "https://macmacoy.github.io/ar-messenger/assets/images/TreasureMap.png"
 
   constructor() { }
 
