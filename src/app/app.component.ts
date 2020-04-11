@@ -16,12 +16,6 @@ export class AppComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    this.hideAddressBar()
-  }
-
-  hideAddressBar() {
-    window.scrollTo(0,1);
-  }
+  ngOnInit() {}
 
 }

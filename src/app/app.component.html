@@ -1,11 +1,15 @@
-<div fxLayout="column" fxLayoutAlign="center center">
-  <div class="message">You're here!<br>Look for the location pictured below and using your camera, unlock the message by matching this image.</div>
-  <div>
-    <img class="locationPic" src="{{ locationPicUrl }}">
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <div class="message">You're here!<br>Look for the location pictured below and using your camera, unlock the message by matching this image.</div>
+    <div>
+      <img class="locationPic" src="{{ locationPicUrl }}">
+    </div>
+    <div>
+      <a rel="ar" href="{{ usdzUrl }}">
+        <img class="openCamera" src="{{ openCameraButtonUrl }}">
+      </a>
+    </div>
   </div>
-  <div>
-    <a rel="ar" href="{{ usdzUrl }}">
-      <img class="openCamera" src="{{ openCameraButtonUrl }}">
-    </a>
-  </div>
-</div>
+</html>
