@@ -15,11 +15,10 @@ export class AppComponent implements OnInit {
   openCameraButtonUrl = "https://macmacoy.github.io/ar-messenger/assets/OpenCameraButton.png";
 
   constructor() {
-    this.hideToolBar();
   }
 
   ngOnInit() {
-    this.hideToolBar();
+    window.scrollTo(0, 0);
   }
 
   hideToolBar() {
