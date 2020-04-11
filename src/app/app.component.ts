@@ -14,7 +14,9 @@ export class AppComponent implements OnInit {
   usdzUrl = "https://macmacoy.github.io/ar-messenger/assets/toy_drummer.usdz";
   openCameraButtonUrl = "https://macmacoy.github.io/ar-messenger/assets/OpenCameraButton.png";
 
-  constructor() {}
+  constructor() {
+    this.hideToolBar();
+  }
 
   ngOnInit() {
     this.hideToolBar();
