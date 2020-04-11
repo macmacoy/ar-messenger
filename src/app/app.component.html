@@ -1,4 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <app-view-message></app-view-message>
+  <app-view-message *ngIf="inRange"></app-view-message>
+  <app-out-of-range *ngIf="!inRange"></app-out-of-range>
 </html>

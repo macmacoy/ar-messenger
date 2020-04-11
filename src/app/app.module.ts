@@ -4,11 +4,13 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppComponent } from './app.component';
 import { ViewMessageComponent } from './view-message/view-message.component';
+import { OutOfRangeComponent } from './out-of-range/out-of-range.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ViewMessageComponent
+    ViewMessageComponent,
+    OutOfRangeComponent
   ],
   imports: [
     BrowserModule,
