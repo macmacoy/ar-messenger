@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,37 +9,11 @@ export class AppComponent implements OnInit {
 
   title = 'ar-messenger';
 
-  @ViewChild('video', { static: true }) videoElement: ElementRef;
-  @ViewChild('canvas', { static: true }) canvas: ElementRef;
+  locationPicUrl = "https://i.kym-cdn.com/entries/icons/facebook/000/016/894/mynameehhjeff.jpg";
+  usdzUrl = "https://github.com/macmacoy/ar-messenger/blob/master/src/assets/toy_drummer.usdz?raw=true";
 
-  constructor(private renderer: Renderer2) {}
+  constructor() {}
 
-  ngOnInit() {
-    // this.startCamera();
-  }
-
-  constraints = {
-    video: {
-        facingMode: "environment",
-        width: { ideal: 4096 },
-        height: { ideal: 2160 }
-    }
-  };
-
-  startCamera() {
-    if (!!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia)) { 
-      navigator.mediaDevices.getUserMedia(this.constraints).then(this.attachVideo.bind(this)).catch(this.handleError);
-    } else {
-        alert('Sorry, camera not available.');
-    }
-  }
-
-  attachVideo(stream) {
-    this.renderer.setProperty(this.videoElement.nativeElement, 'srcObject', stream);
-  }
-
-  handleError(error) {
-    console.log('Error: ', error);
-  }
+  ngOnInit() {}
 
 }
