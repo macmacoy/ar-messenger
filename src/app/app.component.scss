@@ -4,13 +4,13 @@ div {
 }
 
 .message {
-    font-size: 28px;
+    font-size: 5vh;
     margin-top: 5vh;
     margin-bottom: 0vh;
     margin-left: auto;
     margin-right: auto;
-    min-height: 25vh;
-    max-height: 30vw;
+    min-height: 27vh;
+    max-height: 27vh;
     width: 85vw;
     // for testing
     // border: solid #000;
@@ -30,6 +30,7 @@ div {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 3vh;
 	box-shadow:inset 0px 39px 0px -24px #e67a73;
 	background-color:#e4685d;
 	border-radius:4px;
