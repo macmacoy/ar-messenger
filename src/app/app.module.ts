@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppComponent } from './app.component';
+import { ViewMessageComponent } from './view-message/view-message.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ViewMessageComponent
   ],
   imports: [
     BrowserModule,
