@@ -9,7 +9,7 @@ export class ViewMessageComponent implements OnInit {
 
   locationPicUrl = "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/fetch/Category_Pages/Kitchen/Countertops_and_Backsplashes/countertops-hero-mob3.jpg";
   // usdzUrl = "https://developer.apple.com/augmented-reality/quick-look/models/biplane/toy_biplane.usdz";
-  usdzUrl = "https://macmacoy.github.io/ar-messenger/assets/usdz/ToyDrummer.usdz";
+  usdzUrl = "https://macmacoy.github.io/ar-messenger/assets/usdz/my_message.usdz";
   openCameraButtonUrl = "https://macmacoy.github.io/ar-messenger/assets/buttons/OpenCameraButton.png";
 
   constructor() { }
