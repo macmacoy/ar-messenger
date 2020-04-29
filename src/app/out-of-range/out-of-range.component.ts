@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Message } from '../message-service/message-service.service';
 
 @Component({
   selector: 'app-out-of-range',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./out-of-range.component.scss']
 })
 export class OutOfRangeComponent implements OnInit {
+
+  @Input() message: Message;
 
   outOfRangeLogoUrl = "https://macmacoy.github.io/ar-messenger/assets/images/TreasureMap.png"
 

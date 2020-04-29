@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Message } from '../message-service/message-service.service';
 
 @Component({
   selector: 'app-view-message',
@@ -7,14 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewMessageComponent implements OnInit {
 
-  locationPicUrl = "https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/fetch/Category_Pages/Kitchen/Countertops_and_Backsplashes/countertops-hero-mob3.jpg";
-  // usdzUrl = "https://developer.apple.com/augmented-reality/quick-look/models/biplane/toy_biplane.usdz";
-  usdzUrl = "https://macmacoy.github.io/ar-messenger/assets/usdz/my_message.usdz";
+  private _message: Message;
+  @Input() set message(message: Message) {
+      if (message) {
+        this._message = message;
+        this.locationPicSrc = 'data:image/png;base64,' + message.message_location_image;
+        this.usdzUrl = message.message_usdz_url;
+      }
+  }
+
+  locationPicSrc: string;
+  usdzUrl: string;
   openCameraButtonUrl = "https://macmacoy.github.io/ar-messenger/assets/buttons/OpenCameraButton.png";
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

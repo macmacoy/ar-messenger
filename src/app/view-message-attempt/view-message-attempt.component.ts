@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MessageServiceService } from '../message-service/message-service.service';
+import { Message } from '../message-service/message-service.service';
 
 @Component({
   selector: 'app-view-message-attempt',
@@ -10,16 +11,17 @@ export class ViewMessageAttemptComponent implements OnInit {
 
   inRange = true;
   messageId: string;
+  message: Message;
 
   constructor(private messageService: MessageServiceService) {}
 
   ngOnInit(): void {
-    this.getMessage();
+    this.setMessage();
   }
 
-  getMessage() {
-    this.messageService.getMessage(this.messageId).subscribe(data => {
-      console.log(data);
+  setMessage() {
+    this.messageService.getMessage(this.messageId).subscribe(message => {
+      this.message = message;
     });
   }
 
