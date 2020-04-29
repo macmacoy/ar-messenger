@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
 
   onActivate(componentReference) {
     componentReference.messageId = this.messageId;
-    console.log(componentReference.messageId);
  }
 
 }

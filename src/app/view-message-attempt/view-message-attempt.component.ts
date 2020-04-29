@@ -14,6 +14,13 @@ export class ViewMessageAttemptComponent implements OnInit {
   constructor(private messageService: MessageServiceService) {}
 
   ngOnInit(): void {
+    this.getMessage();
+  }
+
+  getMessage() {
+    this.messageService.getMessage(this.messageId).subscribe(data => {
+      console.log(data);
+    });
   }
 
 }

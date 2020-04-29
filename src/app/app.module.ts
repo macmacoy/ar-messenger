@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ViewMessageComponent } from './view-message/view-message.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FlexLayoutModule,
-    [RouterModule.forRoot(routes)]
+    [RouterModule.forRoot(routes)],
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
