@@ -13,7 +13,7 @@ export class ViewMessageComponent implements OnInit {
       if (message) {
         this._message = message;
         this.locationPicSrc = 'data:image/png;base64,' + message.message_location_image;
-        this.usdzUrl = message.message_usdz_url;
+        this.usdzUrl = message.usdz_url;
       }
   }
 

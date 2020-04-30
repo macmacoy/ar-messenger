@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-armessenger-dev-202338-authRole",
+            "UnauthRoleArn": "arn:aws:iam::193206219054:role/amplify-armessenger-dev-202338-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::193206219054:role/amplify-armessenger-dev-202338-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-armessenger-dev-202338-deployment",
+            "UnauthRoleName": "amplify-armessenger-dev-202338-unauthRole",
+            "StackName": "amplify-armessenger-dev-202338",
+            "StackId": "arn:aws:cloudformation:us-east-1:193206219054:stack/amplify-armessenger-dev-202338/d8474740-8a78-11ea-85d8-0a254e00bc9f",
+            "AmplifyAppId": "d1mc3enzoyuu5l"
+        }
+    }
+}

@@ -26,7 +26,7 @@ export class MessageServiceService {
 
 export interface Message {
   message_id: string;
-  message_usdz_url: string;
+  usdz_url: string;
   message_location_image: string;
   user_id: string;
   latitude: string;
