@@ -10,7 +10,7 @@ export class OutOfRangeComponent implements OnInit {
 
   @Input() message: Message;
 
-  outOfRangeLogoUrl = "https://macmacoy.github.io/ar-messenger/assets/images/TreasureMap.png"
+  outOfRangeLogoUrl = "assets/images/TreasureMap.png"
 
   constructor() { }
 
