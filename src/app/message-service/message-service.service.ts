@@ -17,7 +17,7 @@ export class MessageServiceService {
 
   getMessage(messageId: string) {
     // TODO: add location attributes in request
-    let endpoint = this.messagesURL + `?message_id=${messageId}`;
+    let endpoint = this.messagesURL + `/${messageId}`;
     let options = {'headers': {'content-type': 'application/json'}};
     return this.http.get<Message>(endpoint, options);
   }
@@ -25,9 +25,12 @@ export class MessageServiceService {
 }
 
 export interface Message {
-  message_id: string;
+  id: string;
+  url: string;
+  api_url: string;
   usdz_url: string;
-  message_location_image: string;
+  plane_orientation: string;
+  message_location_image_url: string;
   user_id: string;
   latitude: string;
   longitude: string;
