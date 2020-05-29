@@ -1,2 +1,9 @@
-<app-view-message *ngIf="inRange" [message]="message"></app-view-message>
-<app-out-of-range *ngIf="!inRange"></app-out-of-range>
+<div *ngIf="isiPhone">
+    <div *ngIf="!loading">
+        <app-view-message *ngIf="inRange" [message]="message"></app-view-message>
+        <app-out-of-range *ngIf="!inRange"></app-out-of-range>
+    </div>
+</div>
+<div *ngIf="!isiPhone">
+    <app-not-iphone></app-not-iphone>
+</div>

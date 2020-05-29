@@ -8,6 +8,7 @@ import { ViewMessageComponent } from './view-message/view-message.component';
 import { OutOfRangeComponent } from './out-of-range/out-of-range.component';
 import { ViewMessageAttemptComponent } from './view-message-attempt/view-message-attempt.component';
 import { RouterModule, Routes } from '@angular/router';
+import { NotIphoneComponent } from './not-iphone/not-iphone.component';
 
 const routes: Routes = [
   { path: 'message', component: ViewMessageAttemptComponent }
@@ -18,7 +19,8 @@ const routes: Routes = [
     AppComponent,
     ViewMessageAttemptComponent,
     ViewMessageComponent,
-    OutOfRangeComponent
+    OutOfRangeComponent,
+    NotIphoneComponent
   ],
   imports: [
     BrowserModule,

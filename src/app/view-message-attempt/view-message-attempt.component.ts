@@ -14,7 +14,9 @@ export class ViewMessageAttemptComponent implements OnInit {
   maxLongitudeDiff = 0.004;
   maxLatitudeDiff = 0.004;
 
+  isiPhone = true;
   inRange = true;
+  loading = true;
   messageId: string;
   message: Message;
 
@@ -24,13 +26,21 @@ export class ViewMessageAttemptComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.checkIfiPhone();
     this.setMessage();
+  }
+
+  checkIfiPhone() {
+    if (!navigator.userAgent.includes('iPhone')) {
+      this.isiPhone = false;
+    }
   }
 
   setMessage() {
     this.messageService.getMessage(this.messageId).subscribe(message => {
       this.message = message;
       this.setInRange();
+      this.loading = false;
     });
   }
 
