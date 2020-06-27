@@ -6,21 +6,24 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ViewMessageComponent } from './view-message/view-message.component';
 import { OutOfRangeComponent } from './out-of-range/out-of-range.component';
-import { ViewMessageAttemptComponent } from './view-message-attempt/view-message-attempt.component';
+import { MessageLandingPageComponent } from './message-landing-page/message-landing-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NotIphoneComponent } from './not-iphone/not-iphone.component';
+import { ViewMessageAttemptComponent } from './view-message-attempt/view-message-attempt.component';
 
 const routes: Routes = [
-  { path: 'message', component: ViewMessageAttemptComponent }
+  { path: 'message', component: MessageLandingPageComponent },
+  { path: 'viewMessage', component: ViewMessageAttemptComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ViewMessageAttemptComponent,
+    MessageLandingPageComponent,
     ViewMessageComponent,
     OutOfRangeComponent,
-    NotIphoneComponent
+    NotIphoneComponent,
+    ViewMessageAttemptComponent
   ],
   imports: [
     BrowserModule,

@@ -34,5 +34,7 @@ export interface Message {
   user_id: string;
   latitude: string;
   longitude: string;
+  location_name: string;
+  location_areas_of_interest: string;
   creation_dt: string;
 }

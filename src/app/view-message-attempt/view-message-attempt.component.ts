@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageServiceService } from '../message-service/message-service.service';
-import { Message } from '../message-service/message-service.service';
+import { Message, MessageServiceService } from '../message-service/message-service.service';
 import { LocationServiceService } from '../location-service/location-service.service';
 
 @Component({
@@ -50,8 +49,6 @@ export class ViewMessageAttemptComponent implements OnInit {
         Math.abs(+this.message.longitude - +pos.lng) < this.maxLongitudeDiff &&
         Math.abs(+this.message.latitude - +pos.lat) < this.maxLatitudeDiff
       );
-      console.log(String(pos.lng));
-      console.log(String(pos.lat));
     });
   }
 
