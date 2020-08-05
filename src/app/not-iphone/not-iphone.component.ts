@@ -10,7 +10,6 @@ export class NotIphoneComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('here')
   }
 
 }

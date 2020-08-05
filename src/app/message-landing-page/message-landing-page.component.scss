@@ -1,28 +1,25 @@
-div {
+.screen {
     height: 100vh;
-    width: 100vw;
+    width: 97vw;
 }
 
 .message {
     font-family: 'Mukta', sans-serif;
     font-weight: 12px;
-    font-size: 5vh;
-    line-height: 5.2vh;
-    margin-top: 5vh;
-    margin-bottom: 0vh;
+    font-size: 6vh;
+    line-height: 5.4vh;
+    margin-top: 10vh;
     margin-left: auto;
     margin-right: auto;
-    width: 85vw;
+    width: 87vw;
     // for testing
     // border: solid #000;
     // border-width: 1px 1px;
 }
 
 .imHereButton {
-    box-shadow:inset 0px -3px 7px 0px #29bbff;
-    background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-    background-color:#2dabf9;
-    border-radius:3px;
+    background-color:#1DA1F2;
+    border-radius:1px;
     border:1px solid #0b0e07;
     display:inline-block;
     cursor:pointer;
@@ -32,19 +29,25 @@ div {
     padding:9px 23px;
     text-decoration:none;
     text-shadow:0px 1px 0px #263666;
-    margin-bottom: 4vh;
+    text-align: center;
+    font-size: 4vh;
+    width: 27vw;
+    align-self: flex-start;
+    margin-left: 6vw;
 }
-.imHereButton:hover {
-    background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
-    background-color:#0688fa;
-}
-.imHereButton:active {
-    position:relative;
-    top:1px;
+
+.needDirections {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 12px;
+    font-size: 3.5vh;
+    line-height: 5.4vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 87vw;
 }
 
 #map {
-    width: 80vw;
-    height: 40vh;
-    margin-bottom: 12vh;
+    width: 87vw;
+    height: 20vh;
+    margin-bottom: 10vh;
 }

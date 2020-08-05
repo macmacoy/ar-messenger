@@ -46,12 +46,12 @@ export class MessageLandingPageComponent implements OnInit {
   setMessage() {
     this.messageService.getMessage(this.messageId).subscribe(message => {
       this.message = message;
-      this.loading = false;
-      this.makeMap();
       this.meta.addTags([
         { name: 'og:title', content: `${this.user}'s message` },
         { name: 'og:image', content: this.message.message_location_image_url },
       ]);
+      this.makeMap();
+      this.loading = false;
     });
   }
 
