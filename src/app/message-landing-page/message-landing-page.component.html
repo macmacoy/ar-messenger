@@ -1,5 +1,5 @@
 <div class="screen" fxLayout="column" fxLayoutAlign="space-between center">
-    <div class="message">{{ user }} sent you a message from {{ message.location_name }}. Navigate to the location to unlock the message.</div>
+    <div class="message">Navigate to {{ message.location_name }} to view {{ user }}'s message!</div>
     <a *ngIf="!loading" href="#" class="imHereButton" [routerLink]="" (click)="imHereClicked()">I'm Here!</a>
     <div>
         <div class="needDirections">Need Directions?</div>
