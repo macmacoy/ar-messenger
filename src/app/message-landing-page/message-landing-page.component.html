@@ -1,8 +1,7 @@
-<div class="screen" fxLayout="column" fxLayoutAlign="space-between center">
-    <div class="message">Navigate to {{ message.location_name }} to view {{ user }}'s message!</div>
-    <a *ngIf="!loading" href="#" class="imHereButton" [routerLink]="" (click)="imHereClicked()">I'm Here!</a>
-    <div>
-        <div class="needDirections">Need Directions?</div>
-        <div id="map"></div>
-    </div>
+<div class="screen" fxLayout="column" fxLayoutAlign="none center">
+    <div class="message">Navigate here to view {{ user }}'s message!</div>
+    <div id="map"></div>
+    <div class="needDirections">Need Directions?<br><a [href]="mapsLink">{{ message.location_name }}</a></div>
+    <img class="imHereButton" (click)="imHereClicked()" src="assets/buttons/ImHereButton.png">
+    <!-- <a *ngIf="!loading" href="#" class="imHereButton" [routerLink]="" (click)="imHereClicked()">I'm Here!</a> -->
 </div>

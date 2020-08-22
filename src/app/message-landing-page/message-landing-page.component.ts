@@ -22,6 +22,7 @@ export class MessageLandingPageComponent implements OnInit {
   loading = true;
   messageId: string;
   message: Message;
+  mapsLink: string;
 
   user = "Mac Macoy";
 
@@ -52,6 +53,7 @@ export class MessageLandingPageComponent implements OnInit {
       ]);
       this.makeMap();
       this.loading = false;
+      this.mapsLink = `http://maps.apple.com/?ll=${message.latitude},${message.longitude}`
     });
   }
 

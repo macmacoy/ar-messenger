@@ -8,7 +8,8 @@
     font-weight: 12px;
     font-size: 6vh;
     line-height: 5.4vh;
-    margin-top: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 4vh;
     margin-left: auto;
     margin-right: auto;
     width: 87vw;
@@ -18,29 +19,15 @@
 }
 
 .imHereButton {
-    background-color:#1DA1F2;
-    border-radius:1px;
-    border:1px solid #0b0e07;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family: 'Mukta', sans-serif;
-    font-size:20px;
-    padding:9px 23px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #263666;
-    text-align: center;
-    font-size: 4vh;
-    width: 27vw;
-    align-self: flex-start;
-    margin-left: 6vw;
+    margin-top: 5vh;
+    width: 40vw;
 }
 
 .needDirections {
     font-family: 'Mukta', sans-serif;
     font-weight: 12px;
-    font-size: 3.5vh;
-    line-height: 5.4vh;
+    font-size: 3.2vh;
+    line-height: 3.2vh;
     margin-left: auto;
     margin-right: auto;
     width: 87vw;
@@ -48,6 +35,6 @@
 
 #map {
     width: 87vw;
-    height: 20vh;
-    margin-bottom: 10vh;
+    height: 35vh;
+    margin-bottom: 0.8vh;
 }
