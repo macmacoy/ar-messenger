@@ -1,5 +1,5 @@
 <div class="screen" fxLayout="column" fxLayoutAlign="none center">
-    <div class="message">Navigate here to view {{ user }}'s message!</div>
+    <div class="message">Navigate here to view {{ user.first_name }} {{ user.last_name }}'s message!</div>
     <div id="map"></div>
     <div class="needDirections">Need Directions?<br><a [href]="mapsLink">{{ message.location_name }}</a></div>
     <img class="imHereButton" (click)="imHereClicked()" src="assets/buttons/ImHereButton.png">

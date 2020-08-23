@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageServiceService } from '../message-service/message-service.service';
+import { MessageServiceService, User } from '../message-service/message-service.service';
 import { Message } from '../message-service/message-service.service';
 import { LocationServiceService } from '../location-service/location-service.service';
 import { Router } from '@angular/router';
@@ -24,7 +24,7 @@ export class MessageLandingPageComponent implements OnInit {
   message: Message;
   mapsLink: string;
 
-  user = "Mac Macoy";
+  user: User;
 
   constructor(
     private messageService: MessageServiceService,
@@ -53,7 +53,8 @@ export class MessageLandingPageComponent implements OnInit {
       ]);
       this.makeMap();
       this.loading = false;
-      this.mapsLink = `http://maps.apple.com/?ll=${message.latitude},${message.longitude}`
+      this.mapsLink = `http://maps.apple.com/?ll=${message.latitude},${message.longitude}`;
+      this.user = message.user;
     });
   }
 

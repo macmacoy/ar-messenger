@@ -31,10 +31,18 @@ export interface Message {
   usdz_url: string;
   plane_orientation: string;
   message_location_image_url: string;
-  user_id: string;
   latitude: string;
   longitude: string;
   location_name: string;
   location_areas_of_interest: string;
+  creation_dt: string;
+  user: User;
+}
+
+export interface User {
+  user_id: string;
+  email: string;
+  first_name: string;
+  last_name: string;
   creation_dt: string;
 }
