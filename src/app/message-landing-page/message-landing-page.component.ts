@@ -47,14 +47,10 @@ export class MessageLandingPageComponent implements OnInit {
   setMessage() {
     this.messageService.getMessage(this.messageId).subscribe(message => {
       this.message = message;
-      this.meta.addTags([
-        { name: 'og:title', content: `${this.user}'s message` },
-        { name: 'og:image', content: this.message.message_location_image_url },
-      ]);
+      this.user = message.user;
       this.makeMap();
       this.loading = false;
-      this.mapsLink = `http://maps.apple.com/?ll=${message.latitude},${message.longitude}`;
-      this.user = message.user;
+      this.mapsLink = `http://maps.apple.com/?q=${this.user.first_name}'s Message&ll=${message.latitude},${message.longitude}`;
     });
   }
 
@@ -64,9 +60,9 @@ export class MessageLandingPageComponent implements OnInit {
 
   makeMap() {
     // localhost token
-    // let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IlpCTFVDOEZTN0cifQ.eyJpc3MiOiJIU0tDUTIzM0Q3IiwiaWF0IjoxNTkzMjg2NzA5LCJleHAiOjE2MjQ4NDM2NjEsIm9yaWdpbiI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.aCNxDRD_UFQoyUgXzYe7ABjCgyCErY_0fIvWAWGUSY1q06wgsQlAHf8XQztt4vdH7GUEhBaRt9_HcXmsZo09eg";
+    let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IlpCTFVDOEZTN0cifQ.eyJpc3MiOiJIU0tDUTIzM0Q3IiwiaWF0IjoxNTkzMjg2NzA5LCJleHAiOjE2MjQ4NDM2NjEsIm9yaWdpbiI6Imh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJ9.aCNxDRD_UFQoyUgXzYe7ABjCgyCErY_0fIvWAWGUSY1q06wgsQlAHf8XQztt4vdH7GUEhBaRt9_HcXmsZo09eg";
     // cloudfront token
-    let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IlpCTFVDOEZTN0cifQ.eyJpc3MiOiJIU0tDUTIzM0Q3IiwiaWF0IjoxNTkzMjkwNDM3LCJleHAiOjE2MjQ4NDczODksIm9yaWdpbiI6Imh0dHBzOi8vZDNvM3g3N2RqZ3BtNGMuY2xvdWRmcm9udC5uZXQifQ.eEI6pARwymP2F1OHOORMkL7Z3Hxh3pP4rXXHze3_NBxQ5dsAZ6Y-GNGZoY0yI6IeW5Na7pCynqlNV94kx-zGJg"
+    //let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IlpCTFVDOEZTN0cifQ.eyJpc3MiOiJIU0tDUTIzM0Q3IiwiaWF0IjoxNTkzMjkwNDM3LCJleHAiOjE2MjQ4NDczODksIm9yaWdpbiI6Imh0dHBzOi8vZDNvM3g3N2RqZ3BtNGMuY2xvdWRmcm9udC5uZXQifQ.eEI6pARwymP2F1OHOORMkL7Z3Hxh3pP4rXXHze3_NBxQ5dsAZ6Y-GNGZoY0yI6IeW5Na7pCynqlNV94kx-zGJg"
 
     // authorize
     mapkit.init({
