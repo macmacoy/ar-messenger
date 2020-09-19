@@ -10,10 +10,14 @@ import { MessageLandingPageComponent } from './message-landing-page/message-land
 import { RouterModule, Routes } from '@angular/router';
 import { NotIphoneComponent } from './not-iphone/not-iphone.component';
 import { ViewMessageAttemptComponent } from './view-message-attempt/view-message-attempt.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component'
 
 const routes: Routes = [
+  { path: '', component: HomePageComponent },
   { path: 'message', component: MessageLandingPageComponent },
-  { path: 'viewMessage', component: ViewMessageAttemptComponent }
+  { path: 'viewMessage', component: ViewMessageAttemptComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent }
 ];
 
 @NgModule({
@@ -23,7 +27,9 @@ const routes: Routes = [
     ViewMessageComponent,
     OutOfRangeComponent,
     NotIphoneComponent,
-    ViewMessageAttemptComponent
+    ViewMessageAttemptComponent,
+    HomePageComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,
