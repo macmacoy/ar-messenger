@@ -13,7 +13,7 @@ export class LocationServiceService {
           resolve({lng: resp.coords.longitude, lat: resp.coords.latitude});
         },
         err => {
-          reject(err);
+          resolve({lng: null, lat: null});
         });
     });
   }

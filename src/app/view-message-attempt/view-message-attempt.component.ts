@@ -14,7 +14,7 @@ export class ViewMessageAttemptComponent implements OnInit {
   maxLatitudeDiff = 0.004;
 
   isiPhone = true;
-  inRange = true;
+  inRange = false;
   loading = true;
   messageId: string;
   message: Message;
@@ -45,10 +45,15 @@ export class ViewMessageAttemptComponent implements OnInit {
 
   setInRange() {
     this.locationService.getPosition().then(pos => {
-      this.inRange = (
-        Math.abs(+this.message.longitude - +pos.lng) < this.maxLongitudeDiff &&
-        Math.abs(+this.message.latitude - +pos.lat) < this.maxLatitudeDiff
-      );
+      if (pos.lng != null && pos.lat != null) {
+        this.inRange = (
+          Math.abs(+this.message.longitude - +pos.lng) < this.maxLongitudeDiff &&
+          Math.abs(+this.message.latitude - +pos.lat) < this.maxLatitudeDiff
+        );
+      }
+      else {
+        this.inRange = false;
+      }
     });
   }
 
