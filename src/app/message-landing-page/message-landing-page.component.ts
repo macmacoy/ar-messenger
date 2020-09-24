@@ -79,7 +79,7 @@ export class MessageLandingPageComponent implements OnInit {
     var messageLocation = new mapkit.Coordinate(+this.message.latitude, +this.message.longitude);
     var messageLocationAnnotation = new MarkerAnnotation(messageLocation);
     messageLocationAnnotation.color = "#969696"; 
-    messageLocationAnnotation.title = "Mac's Message";
+    messageLocationAnnotation.title = `${this.user.first_name}'s Message`;
     messageLocationAnnotation.selected = "true";
     // messageLocationAnnotation.glyphText = "";
     
