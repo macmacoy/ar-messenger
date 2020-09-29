@@ -15,6 +15,7 @@ export class ViewMessageAttemptComponent implements OnInit {
 
   isiPhone = true;
   inRange = false;
+  inRangeChecked = false;
   loading = true;
   messageId: string;
   message: Message;
@@ -54,6 +55,7 @@ export class ViewMessageAttemptComponent implements OnInit {
       else {
         this.inRange = false;
       }
+      this.inRangeChecked = true;
     });
   }
 
