@@ -48,6 +48,7 @@ export class MessageLandingPageComponent implements OnInit {
     this.messageService.getMessage(this.messageId).subscribe(message => {
       this.message = message;
       this.user = message.user;
+      this.message.location_name = this.message.location_name != 'UNKNOWN' ? this.message.location_name : `${this.user.first_name}'s Message`
       this.makeMap();
       this.loading = false;
       this.mapsLink = `http://maps.apple.com/?q=${this.user.first_name}'s Message&ll=${message.latitude},${message.longitude}`;

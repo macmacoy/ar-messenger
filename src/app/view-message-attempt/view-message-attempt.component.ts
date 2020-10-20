@@ -9,9 +9,9 @@ import { LocationServiceService } from '../location-service/location-service.ser
 })
 export class ViewMessageAttemptComponent implements OnInit {
 
-  // approximately a quarter mile
-  maxLongitudeDiff = 0.004;
-  maxLatitudeDiff = 0.004;
+  // approximately a mile
+  maxLongitudeDiff = 0.016;
+  maxLatitudeDiff = 0.016;
 
   isiPhone = true;
   inRange = false;
