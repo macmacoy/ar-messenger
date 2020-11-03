@@ -11,7 +11,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotIphoneComponent } from './not-iphone/not-iphone.component';
 import { ViewMessageAttemptComponent } from './view-message-attempt/view-message-attempt.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component'
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { NoLocationAccessComponent } from './no-location-access/no-location-access.component'
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -29,7 +30,8 @@ const routes: Routes = [
     NotIphoneComponent,
     ViewMessageAttemptComponent,
     HomePageComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
+    NoLocationAccessComponent
   ],
   imports: [
     BrowserModule,

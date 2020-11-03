@@ -14,15 +14,27 @@ export class ViewMessageComponent implements OnInit {
         this._message = message;
         this.locationPicSrc = message.message_location_image_url;
         this.usdzUrl = message.usdz_url;
+        this.quickLookTitle = encodeURIComponent(`${this._message.user.first_name}'s Tapestry`);
+        this.quickLookSubTitle = encodeURIComponent('Sent with Tapestry.AR');
       }
   }
 
   locationPicSrc: string;
   usdzUrl: string;
   openCameraButtonUrl = "https://macmacoy.github.io/ar-messenger/assets/buttons/OpenCameraButton.png";
+  quickLookTitle: string;
+  quickLookSubTitle: string;
+  appStoreUrl: string = "https://apps.apple.com/us/app/tapestry-ar/id1532544449";
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const linkElement = document.getElementById("ar-link");
+    linkElement.addEventListener("message", function (event: MessageEvent) {   
+      if (event.data == "_apple_ar_quicklook_button_tapped") {
+        window.open("https://apps.apple.com/us/app/tapestry-ar/id1532544449", "_blank");
+      }
+    }, false);
+  }
 
 }

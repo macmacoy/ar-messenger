@@ -1,7 +1,8 @@
 <div *ngIf="isiPhone">
     <div *ngIf="!loading">
-        <app-view-message *ngIf="inRangeChecked && inRange" [message]="message"></app-view-message>
-        <app-out-of-range *ngIf="inRangeChecked && !inRange"></app-out-of-range>
+        <app-view-message *ngIf="inRangeChecked && locationServicesOn && inRange" [message]="message"></app-view-message>
+        <app-out-of-range *ngIf="inRangeChecked && locationServicesOn && !inRange"></app-out-of-range>
+        <app-no-location-access *ngIf="inRangeChecked && !locationServicesOn"></app-no-location-access>
     </div>
 </div>
 <div *ngIf="!isiPhone">
